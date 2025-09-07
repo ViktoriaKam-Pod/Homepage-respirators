@@ -1,0 +1,598 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  border: none;
+}
+$yelow: #FFB800;
+$blackBlue: #0C122D;
+$grey: #575C74;
+$blue: Blue;
+$white: #ffffff;
+$rubik: "Rubik", sans-serif;
+$openSans: "Open Sans", sans-serif;
+@mixin flex_column{
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex_row{
+  display: flex;
+  flex-direction: row;
+}
+body{
+  width: clamp(200px, 100%, 1920px);
+}
+.header{
+  @include flex_column();
+  align-items: center;
+}
+.icon-burger-menu, .icon-close-menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+
+.header-top-adaptive{
+  @include flex_column();
+  position: absolute;
+  background-color: $grey;
+  width: 200px;
+  height: 100vh;
+  display: none;
+  padding: 20px;
+}
+.header-top {
+  @include flex_row();
+  position: absolute;
+  gap: 45px;
+  justify-content: center;
+  align-items: center;
+  width: 1140px;
+  height: 47px;
+  top: 20px;
+  opacity: 1;
+  a {
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: $grey;
+    }
+  .logo-btn{
+    width: 123px;
+    height: 47px;
+    opacity: 1;
+    top: 20px;
+    border-radius: 8px;
+    background-color: $blue;
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: $white;
+    text-align: center;
+  }
+  .logo{
+    width: 121px;
+    height: 40px;
+    background-color: silver;
+    margin-right: auto;
+  }
+} 
+
+.header-content{
+  @include flex_row();
+  justify-content: flex-end;
+  .header-text{
+    width: clamp(200px, 50%, 555px);
+    height: 430px;
+    @include flex_column();
+    justify-content: center;
+    margin-right: 48px;
+    margin-top: 304px;
+    span{
+      color: $yelow;
+    }
+    h1{
+      font-family: $rubik;
+      color: $blackBlue;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 82px;
+      margin-top: 30px;
+    }
+    p {
+      font-family: $openSans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $grey;
+      margin-top: 40px;
+    }
+    .header-btn{
+      @include flex_row();
+      gap: 10px;
+      margin-top: 54px;
+      .header-btn1{
+        width: 115px;
+        height: 46px;
+        opacity: 1;
+        border-radius: 8px;
+        padding: 8px 24px 8px 24px;
+        background-color: $blue;
+        color: $white;
+        font-family: $rubik;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+      }
+      .header-btn2{
+        width: 127px;
+        height: 46px;
+        opacity: 1;
+        border-radius: 8px;
+        padding: 8px 24px 8px 24px;
+        border: $yelow solid 1px;
+        color: $yelow;
+        background-color: inherit;
+        font-family: $rubik;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+  }
+  .header-foto{
+    position: relative;
+    .foto{
+      opacity: 15%;
+      height: 891px;
+      width: 927px;
+      img {
+        border-bottom-left-radius: 150px;
+      }
+    }
+    .img-header{
+      position: absolute;
+      width: 496px;
+      height: 744px;
+      top: 147px;
+      //left: 1033px;
+      opacity: 1;
+      //align-items: flex-end;
+      img {
+        border-radius: 15px 0 15px 0;
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+//
+
+.main{
+  @include flex_column();
+  justify-content: center;
+  .advantages{
+    @include flex_row();
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 78px;
+    margin-bottom: 53px;
+    //height: 179px;
+    gap: 31px;
+    .element{
+      @include flex_column();
+      width: 270px;
+      height: 179px;
+      opacity: 1;
+    }
+    .advantages-info{
+      @include flex_row();
+      color: $blackBlue;
+      .advantages-title{
+        font-family: $openSans;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        width: 210px;
+        height: 54px;
+      }
+      .advantages-info-img{
+        width: 40px;
+        height: 40px;
+        margin-top: 6px;
+        margin-right: 10px;
+      }
+    }
+    .advantages-par{
+      width: 210px;
+      height: 110px;
+      opacity: 1;
+      margin-top: 15px;
+      margin-left: 50px;
+      font-family: $openSans;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: $grey;
+    }
+  }
+  .about{
+    @include flex_column();
+    align-content: center;
+    margin-top: 80px;
+    @include flex_column();
+    .about-respirators:last-child{
+      margin-top: 80px;
+    }
+    .about-respirators{
+      @include flex_row();
+      justify-content: center;
+      flex-wrap: wrap;
+      //width: 1140px;
+      .about-respirators-img{
+        width: 570px;
+        height: 616px;
+        opacity: 1;
+      }
+      .about-respirators-info{
+        @include flex_column();
+        margin-left: 47px;
+        .about-respirators-title{
+        margin-top: 10px;
+        margin-bottom: 26px;
+        color: $blackBlue;
+        width: 523px;
+        font-family: $rubik;
+        font-weight: 700;
+        font-size: 48px;
+        }
+        .about-respirators-par{
+          width: 523px;
+          height: 517px;
+          color: $grey;
+          font-family: $openSans;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1140px;
+  margin: 0 auto;
+    .container-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 570px;
+    height: 593px;
+    position: relative;
+    margin-top: 15px;
+    min-height: 300px;
+    }
+    .light-text{
+      color: $grey;
+      font-family: $openSans;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      width: 285px;
+      height: 332px;
+      p{
+        width: 225px;
+        padding: 80px 30px;
+      }
+    }
+    .block-blue-text{
+      width: 285px;
+      height: 332px;
+      background-color: $blue;
+      border-top-right-radius: 20px;
+      color: rgba(255, 255, 255, 1);
+      font-family: $openSans;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      p{
+        width: 225px;
+        padding: 80px 30px;
+      }
+    }
+    .blue-text{
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      grid-column: 2 / 4;
+      background-color: $blue;
+      color: rgba(255, 255, 255, 1);
+      width: 285px;
+      height: 332px;
+      font-family: $openSans;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      p{
+        width: 225px;
+        padding: 80px 30px;
+      }
+    }
+    .contact-section{
+      grid-column: 2 / 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 570px;
+      height: 276px;
+      background-color: rgba(255, 184, 0, 1);
+      border-bottom-right-radius: 20px;
+      color: $blackBlue;
+      .contact-section-content{
+        max-width: 50%;
+        margin-left: 30px;
+          h3{
+            margin-bottom: 10px;
+            font-family: $rubik;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 50px;
+            
+          }
+          p{
+            margin-bottom: 15px;
+            width: 492px;
+            height: 78px;
+            font-family: $openSans;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+          }
+          button{
+            width: 125px;
+            height: 46px;
+            background-color: inherit;
+            border: solid 1px $blue;
+            padding: 8px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: $blue;
+            font-family: $rubik;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+        .contact-box {
+          @include flex_row();
+          text-align: center;
+          width: 248px;
+          height: 51px;
+          align-self: flex-end;
+          margin-bottom: 40px;
+          
+          .contact-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: $blue;
+            text-align: start;
+          }
+          img{
+            width: 46px;
+            height: 46px;
+          }
+          .phone-number {
+            font-family: $openSans;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 24px;
+            width: 189px;
+          }
+        }
+      }
+    }
+    .certification{
+      @include flex_row(); 
+      margin-top: 80px;
+      justify-content: center;
+      .certification-lab{
+        @include flex_row();
+        p{
+          font-family: $openSans;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 24px;
+          vertical-align: middle;
+          color: $grey;
+          margin-right: 10px;
+          align-self: center;
+        }
+        img{
+          width: 147px;
+          height: 1px;
+          opacity: 1;
+          background-color: $yelow;
+          align-self: center;
+        }
+      }
+      .certification-img1{
+        width: 66px;
+        height: 80px;
+        margin-left: 90px;
+      }
+      .certification-img2{
+        width: 126px;
+        height: 80px;
+        opacity: 1;
+        margin-left: 102px;
+      }
+      .certification-img3{
+        width: 104px;
+        height: 80px;
+        opacity: 1;
+        margin-left: 102px;
+      }
+    }
+    .reasons{
+      @include flex_row();
+      margin-top: 80px;
+      justify-content: center;
+      flex-wrap: wrap;
+      .reasons-img{
+        margin-right: 90px;
+        width: 400px;
+        height: 630px;
+        opacity: 1;
+        img{
+          border-radius: 16px 16px 16px 0;
+        }
+      }
+      .reasons-info{
+        h1{
+          color: $blackBlue;
+          font-family: $rubik;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 50px;
+          max-width: 653px;
+          margin-bottom: 10px;
+        }
+        p{
+          max-width: 651px;
+          color: $grey;
+          font-family: $openSans;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+      }
+      .reasons-info-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto; 
+        gap: 20px; 
+        max-width: 650px;
+        //height: 362px;
+        opacity: 1;
+        .reasons-info-icons{
+          @include flex_row();
+          .reasons-info-icons-img{
+            width: 56px;
+            height: 56px;
+            margin-right: 10px;
+          }
+          .reasons-info-icons-title{
+            h3{
+              font-family: $openSans;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 28px;
+              letter-spacing: 0%;
+              color: $blackBlue;
+            }
+            p{
+              font-family: $openSans;
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 22px;
+              letter-spacing: 0%;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+@media all and (max-width: 1540px){
+.header-text{
+margin-left: 20px;
+//
+}
+}
+@media all and (max-width: 1330px){
+  .header-top{
+    display: none;
+  }
+  .icon-burger-menu {
+    display: block;
+  }
+  .burger-menu {
+    .logo{
+      width: 121px;
+      height: 40px;
+      background-color: silver;
+    }
+    .logo-btn{
+      width: 123px;
+      height: 47px;
+      opacity: 1;
+      top: 20px;
+      border-radius: 8px;
+      background-color: $blue;
+      font-family: $rubik;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+      color: $white;
+      text-align: center;
+    }
+    a{
+      padding: 20px;
+    }
+  }
+  .header-content {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    .header-text{
+      margin-top: 150px;
+     // margin-left: 200px;
+    }
+    }
+    .img-header{
+      left:50%;
+      transform: translate(-50%);
+    }
+  }
+@media all and (max-width: 1135px){
+
+      .container{
+        width: fit-content;
+      }
+      body{
+        width: fit-content;
+      }
+  }
+  @media all and (max-width: 800px){
+    .main{
+      .about{
+        .about-respirators{
+      display: inline;
+      margin: 0 auto;
+    }
+      }
+    }
+    
+  }
+  
+
